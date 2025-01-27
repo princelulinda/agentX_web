@@ -56,7 +56,7 @@ export default function DashboardLayout({
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <Navigation user={user} />
+      <Navigation/>
       <main className="container mx-auto px-4 py-8">
         {children}
       </main>

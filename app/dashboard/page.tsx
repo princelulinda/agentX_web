@@ -118,7 +118,7 @@ export default function Dashboard() {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <span className="text-sm text-gray-400 hidden sm:block">{user.email}</span>
+            <span className="text-sm text-gray-400 hidden sm:block">{user?.email}</span>
             <button
               onClick={() => {
                 localStorage.removeItem('token');
@@ -165,8 +165,8 @@ export default function Dashboard() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <StatsCard
               title="Wallet Balance"
-              value={`${user.wallet.balance.toFixed(2)} USDT`}
-              subtitle={user.wallet.address}
+              value={`${user?.wallet.balance.toFixed(2)} USDT`}
+              subtitle={user?.wallet.address}
               icon={
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6h18M3 12h18m-18 6h18" />
@@ -176,9 +176,9 @@ export default function Dashboard() {
 
             <StatsCard
               title="Total Invested"
-              value={`${user.total_invested.toFixed(2)} USDT`}
+              value={`${user?.total_invested.toFixed(2)} USDT`}
               trend={{
-                value: `${user.investments.length} active investment${user.investments.length > 1 ? 's' : ''}`,
+                value: `${user?.investments?.length} active investment${user?.investments?.length&& user?.investments?.length> 1 ? 's' : ''}`,
                 positive: true
               }}
               icon={
@@ -190,9 +190,9 @@ export default function Dashboard() {
 
             <StatsCard
               title="Total Earnings"
-              value={`${user.total_earnings.toFixed(2)} USDT`}
+              value={`${user?.total_earnings.toFixed(2)} USDT`}
               trend={{
-                value: `+${((user.total_earnings / user.total_invested) * 100).toFixed(2)}% return`,
+                value: `+${((user?.total_earnings / user?.total_invested) * 100).toFixed(2)}% return`,
                 positive: true
               }}
               icon={
@@ -217,7 +217,7 @@ export default function Dashboard() {
 
             <StatsCard
               title="Total Withdrawn"
-              value={`${user.total_withdrawn.toFixed(2)} USDT`}
+              value={`${user?.total_withdrawn.toFixed(2)} USDT`}
               subtitle="Last updated a few seconds ago"
               icon={
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -345,7 +345,7 @@ export default function Dashboard() {
             </div>
 
             <div className="space-y-4">
-              {user.investments.map((investment) => (
+              {user?.investments.map((investment) => (
                 <Card key={investment.id} className="group">
                   <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
                     <div className="flex-1">

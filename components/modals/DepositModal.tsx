@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Plan } from '@/types';
 import Input from '@/components/ui/Input';
-import Image from 'next/image';
 import { QRCodeSVG } from 'qrcode.react';
 
 interface DepositModalProps {
