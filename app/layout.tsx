@@ -11,6 +11,11 @@ export const metadata: Metadata = {
   description: "Join AgentX - The Future of Crypto Investment. Earn up to 2.5% daily returns with our AI-powered trading strategies. Start with just 10 USDT and watch your portfolio grow. Secure, transparent, and proven track record.",
   keywords: "crypto investment, bitcoin trading, passive income, USDT investment, daily returns, cryptocurrency",
   authors: [{ name: "AgentX Team" }],
+  icons: {
+    icon: '/images/crypto/bitcoin.png',  
+    apple: '/apple-icon.png',
+    shortcut: '/favicon.ico',
+  },
   openGraph: {
     title: "AgentX | Smart Crypto Investment Platform",
     description: "🚀 Earn up to 2.5% daily returns with AI-powered trading\n💎 Start with just 10 USDT\n✨ Secure & transparent\n💫 24/7 automated trading\n🌟 Join thousands of successful investors",
